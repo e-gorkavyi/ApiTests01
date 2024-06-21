@@ -4,9 +4,9 @@ pipeline {
     maven 'maven-3.8.7'
   }
   stages {
-    stage ('Build') {
+    stage ('Tests') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn clean test'
       }
     }
   }
